@@ -18,7 +18,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.9  
+          python-version: 3.11 
 
       - name: Install dependencies
         run: |
@@ -28,7 +28,7 @@ jobs:
       - name: Build and Test
         run: |
           mkdir -p logs
-          python main.py > logs/build.log 2>&1
+          python hello.py > logs/build.log 2>&1
          
       - name: Archive log files
         uses: actions/upload-artifact@v2
